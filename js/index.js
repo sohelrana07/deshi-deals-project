@@ -82,7 +82,7 @@ for (const btn of cartBtn) {
                  <img src="${productImg}" width="62" alt="" />
                </figure>
                <div>
-                 <h3 class="font-semibold">Product: ${productTitle}</h3>
+                 <h3 class="font-semibold">${productTitle}</h3>
                  <p class="text-gray-400 text-sm">Price: ${productPrice}</p>
                </div>
              </div>
