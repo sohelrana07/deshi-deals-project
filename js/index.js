@@ -52,15 +52,12 @@ for (const btn of cartBtn) {
 
     const totalPrice =
       btn.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
-        .children[1].children[1].children[4].children[1].children[0].innerText;
-
-    const totalPriceAll =
-      btn.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
-        .children[1].children[1].children[4].children[3].children[0].innerText;
+        .children[1].children[1].children[5].children[1].children[0].innerText;
+    console.log(totalPrice);
 
     const discounT =
       btn.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
-        .children[1].children[1].children[4].children[2].children[0].innerText;
+        .children[1].children[1].children[5].children[2].children[0].innerText;
 
     const totalAmounts = Number(productPrice) + Number(totalPrice);
     const totalDiscount = (totalAmounts * Number(discounT)) / 100;
@@ -99,5 +96,10 @@ for (const btn of cartBtn) {
 document.getElementById("buy-btn").addEventListener("click", function () {
   getId("cart-container").innerHTML = "";
   getId("total-price").innerText = "0";
-  getId("total-price1").innerText = "0";
+  getId("total-quantity").innerText = "0";
+});
+
+// buy order container clear btn setup
+getId("buy-order-btn").addEventListener("click", function () {
+  getId("cart-container").innerHTML = "";
 });
