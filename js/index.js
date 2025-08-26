@@ -53,7 +53,6 @@ for (const btn of cartBtn) {
     const totalPrice =
       btn.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
         .children[1].children[1].children[5].children[1].children[0].innerText;
-    console.log(totalPrice);
 
     const discounT =
       btn.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode
