@@ -66,8 +66,11 @@ for (const btn of cartBtn) {
     const totalDiscount = (totalAmounts * Number(discounT)) / 100;
     const DiscountPrice = Number(totalAmounts) - totalDiscount;
 
+    const Quantity = getId("total-quantity").innerText;
+    const totalQuantity = Number(Quantity) + 1;
+
     getId("total-price").innerText = DiscountPrice.toFixed(2);
-    getId("total-price1").innerText = DiscountPrice.toFixed(2);
+    getId("total-quantity").innerText = totalQuantity;
 
     // parent container
     const cartContainer = getId("cart-container");
@@ -76,14 +79,14 @@ for (const btn of cartBtn) {
     const newElement = document.createElement("div");
     newElement.innerHTML = `
             <div
-              class="flex justify-between items-center bg-gray-100 p-5 rounded-lg mb-4"
+              class="flex justify-between items-center gap-3 bg-gray-100 p-5 rounded-lg mb-4"
             >
                <figure>
                  <img src="${productImg}" width="62" alt="" />
                </figure>
                <div>
                  <h3 class="font-semibold">${productTitle}</h3>
-                 <p class="text-gray-400 text-sm">Price: ${productPrice}</p>
+                 <p class="text-gray-400 text-sm">Price: ${productPrice} Tk</p>
                </div>
              </div>
     `;
