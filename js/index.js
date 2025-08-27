@@ -101,4 +101,6 @@ document.getElementById("buy-btn").addEventListener("click", function () {
 // buy order container clear btn setup
 getId("buy-order-btn").addEventListener("click", function () {
   getId("cart-container").innerHTML = "";
+  getId("total-price").innerText = "0";
+  getId("total-quantity").innerText = "0";
 });
